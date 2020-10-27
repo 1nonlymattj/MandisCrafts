@@ -26,7 +26,7 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">
                Cart (<span class="total-count"></span>)
             </button>
-            <button class="clear-cart btn btn-danger">Clear Cart</button>
+            <button class="clear-cart btn btn-danger">Empty Cart</button>
          </div>
       </div>
    </nav>
@@ -67,7 +67,8 @@
                <div class="row">
                   <div class="col">
                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="img/blackLantern1.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/blackLantern1.png" alt="Card image cap"
+                           style="height: 22rem;">
                         <div class="card-block">
                            <h4 class="card-title">Black Lantern</h4>
                            <p class="card-text">$45.00</p>
@@ -79,7 +80,8 @@
                   </div>
                   <div class="col">
                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="img/metalLantern1.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/metalLantern1.png" alt="Card image cap"
+                           style="height: 22rem;">
                         <div class="card-block">
                            <h4 class="card-title">Metal Lantern</h4>
                            <p class="card-text">$45.00</p>
@@ -91,7 +93,8 @@
                   </div>
                   <div class="col">
                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="img/imageComingSoon.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/imageComingSoon.png" alt="Card image cap"
+                           style="height: 22rem;">
                         <div class="card-block">
                            <h4 class="card-title">White Lantern</h4>
                            <p class="card-text">$45.00</p>
@@ -116,7 +119,8 @@
                <div class="row">
                   <div class="col">
                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="img/winterWreath2.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/winterWreath2.png" alt="Card image cap"
+                           style="height: 22rem;">
                         <div class="card-block">
                            <h4 class="card-title">White Let it Snow</h4>
                            <p class="card-text">$25.00</p>
@@ -127,7 +131,8 @@
                   </div>
                   <div class="col">
                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="img/winterWreath1.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/winterWreath1.png" alt="Card image cap"
+                           style="height: 22rem;">
                         <div class="card-block">
                            <h4 class="card-title">Red Let it Snow</h4>
                            <p class="card-text">$20.00</p>
@@ -152,7 +157,8 @@
                   <div class="row">
                      <div class="col">
                         <div class="card" style="width: 20rem;">
-                           <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap">
+                           <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap"
+                              style="height: 22rem;">
                            <div class="card-block">
                               <h4 class="card-title">7 Hook Stocking Holder</h4>
                               <p class="card-text">$70.00</p>
@@ -163,7 +169,8 @@
                      </div>
                      <div class="col">
                         <div class="card" style="width: 20rem;">
-                           <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap">
+                           <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap"
+                              style="height: 22rem;">
                            <div class="card-block">
                               <h4 class="card-title">6 Hook Stocking Holder</h4>
                               <p class="card-text">$65.00</p>
@@ -174,7 +181,8 @@
                      </div>
                      <div class="col">
                         <div class="card" style="width: 20rem;">
-                           <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap">
+                           <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap"
+                              style="height: 22rem;">
                            <div class="card-block">
                               <h4 class="card-title">5 Hook Stocking Holder</h4>
                               <p class="card-text">$60.00</p>
@@ -185,7 +193,8 @@
                      </div>
                      <div class="col">
                         <div class="card" style="width: 20rem;">
-                           <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap">
+                           <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap"
+                              style="height: 22rem;">
                            <div class="card-block">
                               <h4 class="card-title">4 Hook Stocking Holder</h4>
                               <p class="card-text">$55.00</p>
@@ -222,26 +231,37 @@
                   </div>
                </div>
                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Shopping</button>
                   <button type="button" class="btn btn-primary" onclick="sendMail()">Order now</button>
                </div>
             </div>
          </div>
       </div>
+
+
       <!-- Footer -->
-      <footer class="py-5 bg-dark">
+      <footer id="footer" class="footer text-faded text-center py-5">
          <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+            <p>
+               Copyright &copy; <span id="year"></span> Mandis Crafts
+            </p>
+            <!-- <div class="footer-icons">
+               <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook-f"></i>
+               </a> <a href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram"></i>
+               </a>
+            </div> -->
          </div>
          <!-- /.container -->
       </footer>
+      <!--end of Footer-->
 
       <!-- JavaScript -->
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="js/cart.js"></script>
-      <script src="https://smtpjs.com/v3/smtp.js"></script> 
+      <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>

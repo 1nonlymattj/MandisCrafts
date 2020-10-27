@@ -208,6 +208,6 @@ $('.show-cart').on("change", ".item-count", function(event) {
 displayCart();
 
 function sendMail() {
-   var body = displayCart();
-   window.open('mailto:mattj5609@gmail.com?subject=Mandis Crafts Order Form&body=body');
+   var body = this.$('.total-cart').html(shoppingCart.totalCart());
+   window.open('mailto:mattj5609@gmail.com?subject=Mandis Crafts Order Form&body=' + body);
 }
