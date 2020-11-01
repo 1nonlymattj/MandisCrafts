@@ -201,8 +201,16 @@ $('.show-cart').on("change", ".item-count", function(event) {
 displayCart();
 
 function sendMail() {
-   var body = sessionStorage.getItem('shoppingCart');
+   var body = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split(',').join('%0D%0A');
+   var bodyPretty = JSON.parse(body);
+   var notice = "Please Attach Photos If Ordering Lanterns";
+   var info = "Please Fill Out Information Below: ";
+   var customer = "Name: ";
+   var phone = "Phone: ";
+   var address = "Address: ";
+   var items = "Items Purchased: ";
+   var totalDue = "Total Amount Due When Item(s) Are Complete: "
    var total = shoppingCart.totalCart();
-   window.open('mailto:mattj5609@gmail.com?cc=mandimay5609@gmail.com&subject=Mandis Crafts Order Form&body='
-         + JSON.stringify(body, null, '&nbsp').split('},').join('}<br>') + "<br><br>" + "total amount due: " + total);
+   window.open('mailto:mattj5609@gmail.com?cc=mandimay5609@gmail.com&subject=Mandis Craft Boutique Order Form&body='
+         + notice + '%0D%0A %0D%0A' + info + '%0D%0A' + customer + '%0D%0A' + phone + '%0D%0A' + address + '%0D%0A %0D%0A' + items + '%0D%0A' + bodyPretty + '%0D%0A %0D%0A' + totalDue + total);
 }
