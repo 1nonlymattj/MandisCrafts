@@ -73,22 +73,6 @@ body {
    align-self: center;
 }
 
-#paypal-button {
-   margin: 50px
-   width: 350px
-   height: 70px
-   //background-color: red
-   }
-  
-#log {
-   margin: 50px
-   width: 500px
-   height: 400px
-   font-size: 11px
-   border: 1px solid #ccc
-   padding: 10px
-}
-
 .btn {
    display: inline-block;
    font-weight: 400;
