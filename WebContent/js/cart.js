@@ -278,23 +278,17 @@ $('#paymentPref').change(function () {
 });
 
 function sendMail() {
-   var body = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split(',').join('%0D%0A');
-   var bodyPretty = JSON.parse(body);
+   var itemsString = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split(',').join('%0D%0A');
+   var itemsPretty = JSON.parse(body);
    var notice = "Please Attach Photos If Ordering Lanterns";
    var info = "Please Fill Out Information Below: ";
-   var customer = "Name: ";
-   var phone = "Phone: ";
-   var address = "Address: ";
    var items = "Items Purchased: ";
    var totalDue = "Total Amount Due When Item(s) Are Complete: "
    var total = shoppingCart.totalCart();
-   var payment = item.value;
-   //var bodyString = info + '%0D%0A' + customer + '%0D%0A' + phone + '%0D%0A' + address + '%0D%0A %0D%0A';
    var bodyString = 'Please Fill Out Information Below: %0D%0A Name: %0D%0A Phone: %0D%0A Address: %0D%0A %0D%0A'
    window.open('mailto:mattj5609@gmail.com?cc=mandimay5609@gmail.com&subject=Mandis Craft Boutique Order Form&body='
          + notice + '%0D%0A %0D%0A' + bodyString 
-         + 'preferred payment type: %0D%0A' + payment + 'Venmo Name if selected: ' + '%0D%0A %0D%0A'
-         + items + '%0D%0A' + bodyPretty + '%0D%0A %0D%0A' + totalDue + total);
+         + items + '%0D%0A' + itemsPretty + '%0D%0A %0D%0A' + totalDue + total);
 }
 
 
