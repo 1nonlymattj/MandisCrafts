@@ -400,35 +400,43 @@
                </button>
             </div>
             <div class="modal-body">
-            <div>
+               <div>
                   Amount Due : $<span class="total-cart"></span>
                </div>
             </div>
-            <form class="gform" method="post" data-email="mattj5609@gmail.com" 
-            action="https://script.google.com/macros/s/AKfycbzXngRVZ306wON3tMPz9CbSi-xd5FtYqhPAN6xW2Q/exec">
+            <form class="gform" method="post" data-email="mattj5609@gmail.com"
+               action="https://script.google.com/macros/s/AKfycbzXngRVZ306wON3tMPz9CbSi-xd5FtYqhPAN6xW2Q/exec">
                <div class="modal-body">
                   <div class="form-group">
-                     <input type="name" name="Name" class="form-control" id="autocomplete" placeholder="Name"><br>
-                     <input type="email" name="Email" class="form-control" id="autocomplete" placeholder="Email Address"><br>
-                     <input type="phone" name="Phone" class="form-control" id="autocomplete" placeholder="Phone Number"><br>
+                     <input type="name" name="Name" class="form-control" id="customerName" placeholder="Name"><br><br>
+                     <input type="email" name="Email" class="form-control" id="emailAddress" placeholder="Email Address"><br><br>
+                     <input type="phone" name="Phone" class="form-control" id="phoneNumber" placeholder="Phone Number"><br><br>
                      <br> <input type="street" name="Street" class="form-control" id="autocomplete"
                         placeholder="Street"> <input type="city" name=City class="form-control" id="inputCity"
                         placeholder="City"> <input type="state" name="State" class="form-control"
                         id="inputState" placeholder="State"> <input type="zip" name="Zip Code"
-                        class="form-control" id="inputZip" placeholder="Zip"><br><br>
-               
-                  <h5>Payment Preference:</h5>
-                  <input type="radio" name="Payment Preference" value="Venmo" onclick="document.getElementById('paymentPref').checked=true"> Venmo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="name" name="Venmo Username" class="form-control" id="paymentPref" placeholder="Venmo Username/Phone/Email">
-                  <input type="radio" name="Payment Preference" value="Paypal" onclick="document.getElementById('paymentPref').checked=true"> Paypal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="email" name="Paypal Email" class="form-control" id="paymentPref" placeholder="Paypal Email Address">
+                        class="form-control" id="inputZip" placeholder="Zip"><br> <br>
+                  </div>
                </div>
-               
+               <div class="modal-body">
+                  <h5>Payment Preference:</h5>
+                  <input id="paymentPref" type="radio" name="Payment Preference" value="Venmo"
+                     onclick="document.getElementById('venmoPayment').checked=true"> Venmo
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="paymentPref" type="name" name="Venmo Username" class="form-control"
+                     placeholder="Venmo Username/Phone/Email"> <input type="radio"
+                     name="Payment Preference" value="Paypal"
+                     onclick="document.getElementById('paymentPref').checked=true"> Paypal
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" name="Paypal Email" class="form-control"
+                     placeholder="Paypal Email Address"><br><br>
+               </div>
+               <div class="form-group">
                <div align="center">
                   <input type="submit" class="btn btn-secondary" value="Send">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
-            
-            </form><br>
+               </div>
+               </div>
+            </form>
+            <br>
          </div>
          <div class="modal-footer"></div>
       </div>

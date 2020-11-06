@@ -281,7 +281,6 @@ function sendMail() {
    var itemsString = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split(',').join('%0D%0A');
    var itemsPretty = JSON.parse(body);
    var notice = "Please Attach Photos If Ordering Lanterns";
-   var info = "Please Fill Out Information Below: ";
    var items = "Items Purchased: ";
    var totalDue = "Total Amount Due When Item(s) Are Complete: "
    var total = shoppingCart.totalCart();
