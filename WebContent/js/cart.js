@@ -279,7 +279,7 @@ $('#paymentPref').change(function () {
 
 function sendMail() {
    var itemsString = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split(',').join('%0D%0A');
-   var itemsPretty = JSON.parse(body);
+   var itemsPretty = JSON.parse(itemsString);
    var notice = "Please Attach Photos If Ordering Lanterns";
    var items = "Items Purchased: ";
    var totalDue = "Total Amount Due When Item(s) Are Complete: "
