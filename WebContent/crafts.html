@@ -365,7 +365,7 @@
          <div class="modal-content">
             <div class="modal-header">
                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="window.location.reload();">
                   <span aria-hidden="true">&times;</span>
                </button>
             </div>
@@ -381,8 +381,8 @@
                <h3>Amount will be due when item is ready for pickup</h3>
             </div>
             <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Shopping</button>
-               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderNow">Order
+               <button id="continueShopping" type="button" class="btn btn-secondary" data-dismiss="modal" >Continue Shopping</button>
+               <button id="orderNowButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderNow">Order
                   now</button>
             </div>
          </div>
@@ -394,51 +394,67 @@
       <div class="modal-dialog modal-lg" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">Order Information</h5>
+               <h5 align="center" class="modal-title" id="exampleModalLabel">Order Information</h5>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                </button>
             </div>
+            <form class="gform" method="post" data-email="mattj5609@gmail.com"
+               action="https://script.google.com/macros/s/AKfycbzmgQ8lFLOy9EhtcBUWG2SHgFP3Xd4P2eJdC42jyt_JawRCsXXl/exec">
             <div class="modal-body">
                <div>
-                  Amount Due : $<span class="total-cart"></span>
-               </div>
+               <input type="text" id="total" name="Amount Due" id="amountDue" class="form-control" disabled>
+<!--                   Amount Due: $<span class="total-cart"></span><br><br>
+ -->               </div>
             </div>
-            <form class="gform" method="post" data-email="mattj5609@gmail.com"
-               action="https://script.google.com/macros/s/AKfycbzXngRVZ306wON3tMPz9CbSi-xd5FtYqhPAN6xW2Q/exec">
                <div class="modal-body">
                   <div class="form-group">
-                     <input type="name" name="Name" class="form-control" id="customerName" placeholder="Name"><br><br>
-                     <input type="email" name="Email" class="form-control" id="emailAddress" placeholder="Email Address"><br><br>
-                     <input type="phone" name="Phone" class="form-control" id="phoneNumber" placeholder="Phone Number"><br><br>
+                     <input type="name" name="Name" class="form-control" id="customerName" placeholder="Name" required><br><br>
+                     <input type="email" name="Email" class="form-control" id="emailAddress" placeholder="Email Address" required><br><br>
+                     <input type="phone" name="Phone" class="form-control" id="phoneNumber" placeholder="Phone Number" required><br><br>
                      <br> <input type="street" name="Street" class="form-control" id="autocomplete"
-                        placeholder="Street"> <input type="city" name=City class="form-control" id="inputCity"
-                        placeholder="City"> <input type="state" name="State" class="form-control"
-                        id="inputState" placeholder="State"> <input type="zip" name="Zip Code"
-                        class="form-control" id="inputZip" placeholder="Zip"><br> <br>
+                        placeholder="Street" required> <input type="city" name=City class="form-control" id="inputCity"
+                        placeholder="City" required> <input type="state" name="State" class="form-control"
+                        id="inputState" placeholder="State" required> <input type="zip" name="Zip Code"
+                        class="form-control" id="inputZip" placeholder="Zip" required><br> <br>
                   </div>
                </div>
                <div class="modal-body">
                   <h5>Payment Preference:</h5>
-                  <input id="paymentPref" type="radio" name="Payment Preference" value="Venmo"
-                     onclick="document.getElementById('venmoPayment').checked=true"> Venmo
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="paymentPref" type="name" name="Venmo Username" class="form-control"
-                     placeholder="Venmo Username/Phone/Email"> <input type="radio"
-                     name="Payment Preference" value="Paypal"
-                     onclick="document.getElementById('paymentPref').checked=true"> Paypal
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" name="Paypal Email" class="form-control"
+                  <input type="radio" id="paymentPref" name="Payment Preference" value="Venmo" checked><label for="Venmo">Venmo</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" id="paymentPref" name="Payment Preference" value="PayPal"><label for="PayPal">PayPal</label><br>
+                  <input type="name" name="Venmo Username" class="form-control"
+                     placeholder="Venmo Username/Phone/Email">
+                   <input type="email" name="Paypal Email" class="form-control"
                      placeholder="Paypal Email Address"><br><br>
                </div>
+               <div class="modal-body">
+               <div>
+               <input type="text" id="itemsPretty" name="Items Purchased" id="itemsPurchased" class="form-control" disabled>
+<!--                   Amount Due: $<span class="total-cart"></span><br><br>
+ -->               </div>
+            </div>
+               <div class="modal-footer">
                <div class="form-group">
                <div align="center">
-                  <input type="submit" class="btn btn-secondary" value="Send">
+                  <button type="submit" class="btn btn-secondary" value="Send">Send</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+               </div>
+               </div>
+               </div>
+               <div style="display:none" class="thankyou_message">
+               <div class="modal-body" align="center">
+               <h2><em>Thank You</em> for ordering! </h2>
+               <h5> You will receive a payment request to the chosen method shortly. </h5>
+               <p> <strong>NOTICE: </strong>An Email will be sent requesting photos for lantern purchases <p>
+               <div align="center">
+               <input align="center" type="button" class="clear-cart btn btn-secondary" data-dismiss="modal" value="Close" onclick="javascript:window.location.reload()">
+               </div>
                </div>
                </div>
             </form>
             <br>
          </div>
-         <div class="modal-footer"></div>
       </div>
    </div>
 
@@ -464,6 +480,7 @@
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/bootstrap.min.js"></script>
    <script src="js/cart.js"></script>
+   <script src="js/GoogleFormScript.js"></script>
    <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();
          </script>

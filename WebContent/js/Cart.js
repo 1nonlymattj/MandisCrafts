@@ -269,13 +269,12 @@ function search(type, placeObject) {
 }
 }
 
-$('#paymentPref').change(function () {
-    if($(this).is(':checked')) {
-        $('#paymentPref').attr('required');
-    } else {
-        $('#paymentPref').removeAttr('required');
-    }
-});
+var total = shoppingCart.totalCart();
+document.getElementById("total").value = "Amount Due: $" + total;
+
+var itemsString = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split('},').join('},   ');
+var itemsPretty = JSON.parse(itemsString);
+document.getElementById("itemsPretty").value = "Items Purchased: " + itemsPretty;
 
 function sendMail() {
    var itemsString = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split(',').join('%0D%0A');
@@ -288,6 +287,7 @@ function sendMail() {
    window.open('mailto:mattj5609@gmail.com?cc=mandimay5609@gmail.com&subject=Mandis Craft Boutique Order Form&body='
          + notice + '%0D%0A %0D%0A' + bodyString 
          + items + '%0D%0A' + itemsPretty + '%0D%0A %0D%0A' + totalDue + total);
+   document.getElementById("total").value=total;
 }
 
 
