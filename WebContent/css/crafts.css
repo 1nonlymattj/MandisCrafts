@@ -3,6 +3,16 @@ body {
    background-color: #cccccc !important;
 }
 
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #f869ff !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #f869ff !important;
+}
+
 .row {
    display: flex;
    flex-wrap: wrap;

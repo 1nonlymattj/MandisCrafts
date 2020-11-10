@@ -76,8 +76,38 @@
          </div>
       </div>
    </nav>
+   <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="row">
+         <div class="col">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">
+               Cart (<span class="total-count"></span>)
+            </button>
+            <button class="clear-cart btn btn-danger">Empty Cart</button>
+         </div>
+      </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#lanterns">Christmas in Heaven Lanterns
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#noveltyOrnaments">Novelty Ornaments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#stockingHolders">Stocking Holders</a>
+          </li>
+        </ul>
+      </div>
+   </nav>
 
    <!-- Page Content -->
+
    <div class="container">
 
       <div class="row">
@@ -90,10 +120,10 @@
                   class="list-group-item">Novelty Ornaments</a> <a href="#stockingHolders" class="list-group-item">Stocking
                   Holders</a>
             </div>
-
          </div>
-         <!-- /.col-lg-3 -->
+         <!-- /.row -->
 
+         <!-- Lantern Content -->
          <div class="col-lg-9">
             <h1 id="lanterns" class="my-4">Christmas in Heaven Lanterns</h1>
             <div class="container">
@@ -157,12 +187,18 @@
                </div>
             </div>
          </div>
+      </div>
+      <!-- /.container -->
+   </div>
+
+   <div class="container">
+
+      <div class="row">
 
          <div class="col-lg-3">
-
             <div class="list-group"></div>
-
          </div>
+
          <div class="col-lg-9">
             <h1 id="noveltyOrnaments" class="my-4">Novelty Ornaments</h1>
             <div class="container">
@@ -287,85 +323,84 @@
                </div>
             </div>
          </div>
+      </div>
+   </div>
 
-         <div class="row">
+   <div class="row">
 
-            <div class="col-lg-3">
-               <div class="list-group"></div>
+      <div class="col-lg-3">
+         <div class="list-group"></div>
 
-            </div>
-            <div class="col-lg-9">
-               <h1 id="stockingHolders" class="my-4">Stocking Holders</h1>
-               <div class="container">
-                  <div class="row">
-                     <div class="col">
-                        <div class="card" style="width: 16rem;">
-                           <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap"
-                              style="height: 22rem; width: 16rem;">
-                           <div class="card-block">
-                              <h4 class="card-title">7 Hook Stocking Holder</h4>
-                              <p class="card-text">$70.00</p>
-                              <br> <a href="#" data-name="7&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="70.00"
-                                 class="add-to-cart btn btn-primary">Add to cart</a>
-                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                           </div>
-                        </div>
+      </div>
+      <div class="col-lg-9">
+         <h1 id="stockingHolders" class="my-4">Stocking Holders</h1>
+         <div class="container">
+            <div class="row">
+               <div class="col">
+                  <div class="card" style="width: 16rem;">
+                     <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap"
+                        style="height: 22rem; width: 16rem;">
+                     <div class="card-block">
+                        <h4 class="card-title">7 Hook Stocking Holder</h4>
+                        <p class="card-text">$70.00</p>
+                        <br> <a href="#" data-name="7&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="70.00"
+                           class="add-to-cart btn btn-primary">Add to cart</a>
+                        <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
                      </div>
-                     <div class="col">
-                        <div class="card" style="width: 16rem;">
-                           <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap"
-                              style="height: 22rem; width: 16rem;">
-                           <div class="card-block">
-                              <h4 class="card-title">6 Hook Stocking Holder</h4>
-                              <p class="card-text">$65.00</p>
-                              <br> <a href="#" data-name="6&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="65.00"
-                                 class="add-to-cart btn btn-primary">Add to cart</a>
-                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="card" style="width: 16rem;">
+                     <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap"
+                        style="height: 22rem; width: 16rem;">
+                     <div class="card-block">
+                        <h4 class="card-title">6 Hook Stocking Holder</h4>
+                        <p class="card-text">$65.00</p>
+                        <br> <a href="#" data-name="6&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="65.00"
+                           class="add-to-cart btn btn-primary">Add to cart</a>
+                        <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
                      </div>
-                     <div class="col">
-                        <div class="card" style="width: 16rem;">
-                           <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap"
-                              style="height: 22rem; width: 16rem;">
-                           <div class="card-block">
-                              <h4 class="card-title">5 Hook Stocking Holder</h4>
-                              <p class="card-text">$60.00</p>
-                              <br> <a href="#" data-name="5&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="60.00"
-                                 class="add-to-cart btn btn-primary">Add to cart</a>
-                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="card" style="width: 16rem;">
+                     <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap"
+                        style="height: 22rem; width: 16rem;">
+                     <div class="card-block">
+                        <h4 class="card-title">5 Hook Stocking Holder</h4>
+                        <p class="card-text">$60.00</p>
+                        <br> <a href="#" data-name="5&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="60.00"
+                           class="add-to-cart btn btn-primary">Add to cart</a>
+                        <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
                      </div>
-                     <div class="col">
-                        <div class="card" style="width: 16rem;">
-                           <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap"
-                              style="height: 22rem; width: 16rem;">
-                           <div class="card-block">
-                              <h4 class="card-title">4 Hook Stocking Holder</h4>
-                              <p class="card-text">$55.00</p>
-                              <br> <a href="#" data-name="4&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="55.00"
-                                 class="add-to-cart btn btn-primary">Add to cart</a>
-                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="card" style="width: 16rem;">
+                     <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap"
+                        style="height: 22rem; width: 16rem;">
+                     <div class="card-block">
+                        <h4 class="card-title">4 Hook Stocking Holder</h4>
+                        <p class="card-text">$55.00</p>
+                        <br> <a href="#" data-name="4&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="55.00"
+                           class="add-to-cart btn btn-primary">Add to cart</a>
+                        <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <!-- /.row -->
-
       </div>
-      <!-- /.container -->
    </div>
+
    <!-- Modal -->
    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
          <div class="modal-content">
             <div class="modal-header">
                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="window.location.reload();">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                  onClick="window.location.reload();">
                   <span aria-hidden="true">&times;</span>
                </button>
             </div>
@@ -381,9 +416,10 @@
                <h3>Amount will be due when item is ready for pickup</h3>
             </div>
             <div class="modal-footer">
-               <button id="continueShopping" type="button" class="btn btn-secondary" data-dismiss="modal" >Continue Shopping</button>
-               <button id="orderNowButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderNow">Order
-                  now</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Continue Shopping"
+                  onClick="window.location.reload();">Continue Shopping</button>
+               <button id="orderNowButton" type="button" class="btn btn-primary" data-toggle="modal"
+                  data-target="#orderNow">Order now</button>
             </div>
          </div>
       </div>
@@ -401,56 +437,66 @@
             </div>
             <form class="gform" method="post" data-email="mattj5609@gmail.com"
                action="https://script.google.com/macros/s/AKfycbzmgQ8lFLOy9EhtcBUWG2SHgFP3Xd4P2eJdC42jyt_JawRCsXXl/exec">
-            <div class="modal-body">
-               <div>
-               <input type="text" id="total" name="Amount Due" id="amountDue" class="form-control" disabled>
-<!--                   Amount Due: $<span class="total-cart"></span><br><br>
- -->               </div>
-            </div>
+               <div class="modal-body">
+                  <div>
+                     <input type="text" id="total" name="Amount Due" id="amountDue" class="form-control" disabled>
+                     <!--                   Amount Due: $<span class="total-cart"></span><br><br>
+ -->
+                  </div>
+               </div>
                <div class="modal-body">
                   <div class="form-group">
-                     <input type="name" name="Name" class="form-control" id="customerName" placeholder="Name" required><br><br>
-                     <input type="email" name="Email" class="form-control" id="emailAddress" placeholder="Email Address" required><br><br>
-                     <input type="phone" name="Phone" class="form-control" id="phoneNumber" placeholder="Phone Number" required><br><br>
-                     <br> <input type="street" name="Street" class="form-control" id="autocomplete"
-                        placeholder="Street" required> <input type="city" name=City class="form-control" id="inputCity"
-                        placeholder="City" required> <input type="state" name="State" class="form-control"
-                        id="inputState" placeholder="State" required> <input type="zip" name="Zip Code"
-                        class="form-control" id="inputZip" placeholder="Zip" required><br> <br>
+                     <input type="name" name="Name" class="form-control" id="customerName" placeholder="Name" required><br>
+                     <br> <input type="email" name="Email" class="form-control" id="emailAddress"
+                        placeholder="Email Address" required><br> <br> <input type="phone"
+                        name="Phone" class="form-control" id="phoneNumber" placeholder="Phone Number" required><br>
+                     <br> <br> <input type="street" name="Street" class="form-control" id="autocomplete"
+                        placeholder="Street" required> <input type="city" name=City class="form-control"
+                        id="inputCity" placeholder="City" required> <input type="state" name="State"
+                        class="form-control" id="inputState" placeholder="State" required> <input type="zip"
+                        name="Zip Code" class="form-control" id="inputZip" placeholder="Zip" required><br>
+                     <br>
                   </div>
                </div>
                <div class="modal-body">
                   <h5>Payment Preference:</h5>
-                  <input type="radio" id="paymentPref" name="Payment Preference" value="Venmo" checked><label for="Venmo">Venmo</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="radio" id="paymentPref" name="Payment Preference" value="PayPal"><label for="PayPal">PayPal</label><br>
-                  <input type="name" name="Venmo Username" class="form-control"
-                     placeholder="Venmo Username/Phone/Email">
-                   <input type="email" name="Paypal Email" class="form-control"
-                     placeholder="Paypal Email Address"><br><br>
+                  <input type="radio" id="paymentPref" name="Payment Preference" value="Venmo" checked><label
+                     for="Venmo">Venmo</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="paymentPref"
+                     name="Payment Preference" value="PayPal"><label for="PayPal">PayPal</label><br> <input
+                     type="name" name="Venmo Username" class="form-control" placeholder="Venmo Username/Phone/Email">
+                  <input type="email" name="Paypal Email" class="form-control" placeholder="Paypal Email Address"><br>
+                  <br>
                </div>
                <div class="modal-body">
-               <div>
-               <input type="text" id="itemsPretty" name="Items Purchased" id="itemsPurchased" class="form-control" disabled>
-<!--                   Amount Due: $<span class="total-cart"></span><br><br>
- -->               </div>
-            </div>
+                  <div>
+                     <input type="text" id="itemsPretty" name="Items Purchased" id="itemsPurchased" class="form-control"
+                        disabled>
+                     <!--                   Amount Due: $<span class="total-cart"></span><br><br>
+ -->
+                  </div>
+               </div>
                <div class="modal-footer">
-               <div class="form-group">
-               <div align="center">
-                  <button type="submit" class="btn btn-secondary" value="Send">Send</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+                  <div class="form-group">
+                     <div align="center">
+                        <button type="submit" class="btn btn-secondary" value="Send">Send</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+                     </div>
+                  </div>
                </div>
-               </div>
-               </div>
-               <div style="display:none" class="thankyou_message">
-               <div class="modal-body" align="center">
-               <h2><em>Thank You</em> for ordering! </h2>
-               <h5> You will receive a payment request to the chosen method shortly. </h5>
-               <p> <strong>NOTICE: </strong>An Email will be sent requesting photos for lantern purchases <p>
-               <div align="center">
-               <input align="center" type="button" class="clear-cart btn btn-secondary" data-dismiss="modal" value="Close" onclick="javascript:window.location.reload()">
-               </div>
-               </div>
+               <div style="display: none" class="thankyou_message">
+                  <div class="modal-body" align="center">
+                     <h2>
+                        <em>Thank You</em> for ordering!
+                     </h2>
+                     <h5>You will receive a payment request to the chosen method shortly.</h5>
+                     <p>
+                        <strong>NOTICE: </strong>An Email will be sent requesting photos for lantern purchases
+                     <p>
+                     <div align="center">
+                        <input align="center" type="button" class="clear-cart btn btn-secondary" data-dismiss="modal"
+                           value="Close" onclick="javascript:window.location.reload()">
+                     </div>
+                  </div>
                </div>
             </form>
             <br>
@@ -479,11 +525,11 @@
    <script src="js/jquery.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/bootstrap.min.js"></script>
+   <script src="js/crafts.js"></script>
    <script src="js/cart.js"></script>
+   <script src="js/OrderForm.js"></script>
    <script src="js/GoogleFormScript.js"></script>
-   <script>
-            document.getElementById("year").innerHTML = new Date().getFullYear();
-         </script>
+   <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
