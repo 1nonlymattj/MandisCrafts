@@ -216,8 +216,6 @@ function sendMail() {
    var total = shoppingCart.totalCart();
    var bodyString = 'Please Fill Out Information Below: %0D%0A Name: %0D%0A Phone: %0D%0A Address: %0D%0A %0D%0A'
    window.open('mailto:mattj5609@gmail.com?cc=mandimay5609@gmail.com&subject=Mandis Craft Boutique Order Form&body='
-         + notice + '%0D%0A %0D%0A' + bodyString 
-         + items + '%0D%0A' + itemsPretty + '%0D%0A %0D%0A' + totalDue + total);
-   document.getElementById("total").value=total;
+         + notice + '%0D%0A %0D%0A' + bodyString + items + '%0D%0A' + itemsPretty + '%0D%0A %0D%0A' + totalDue + total);
+   document.getElementById("total").value = total;
 }
-
