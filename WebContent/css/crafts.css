@@ -3,6 +3,25 @@ body {
    background-color: #cccccc !important;
 }
 
+.powered {
+   font-size: 8px;
+   color:#d8d8d8;
+}
+
+.powerImage {
+   max-width: 14px;
+   max-height: 14px;
+}
+
+.card-ornament-Img {
+   max-height: 275px !important;
+   align-self: center;
+}
+
+.card-stocking-Img {
+   max-height: 275px !important;
+   align-self: center;
+}
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
@@ -216,8 +235,7 @@ body {
 }
 
 .card-img-top {
-   width: 200px;
-   height: 200px;
+   max-height: 300px;
    align-self: center;
 }
 

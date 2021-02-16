@@ -50,7 +50,7 @@
    content="Mandi has been making seasonal crafts for many years and not only enjoys making them but takes time to personalize them to the customers liking" />
 
 
-<title>Mandi's Craft Boutique</title>
+<title>Mandi's Craft Boutique - Home</title>
 <link rel="icon" href="img/craftsbymandi.png" type="image/jpg" sizes="16x16">
 
 <!-- Bootstrap core CSS -->
@@ -61,10 +61,25 @@
 
 <body>
 
+   <!-- Background -->
    <div id="snowflakeContainer">
       <span class="snowflake">❆</span>
    </div>
+   <!--Background-->
+<div id="welcome" class="container" align="center">
+      <h1>WELCOME TO MANDIS CRAFT BOUTIQUE</h1>
+      <li> Everything in our shop is made to order</li>
+      <li> Items can be paid via PayPal or Venmo invoice</li>
+      <li> All items will be ready for pick up in 3-5 business days after payment is received</li>
+      <li> If purchasing a lantern an email will be sent to request photo of loved one(s)</li>
+      <br>
+         <button class="btn btn-primary" onclick="showShop()">Click here to start shopping</button>
+         <!-- <a href="crafts.html" class="btn btn-primary">Click Here To Start Shopping</a> -->
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+   </div>
+
+   <div id="store" hidden>
    <!-- Navigation -->
    <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
       <div class="row">
@@ -94,71 +109,191 @@
    </nav>
 
    <!-- Page Content -->
+   
+      <div class="container">
 
-   <div class="container">
+         <div class="row">
 
-      <div class="row">
+            <!-- /.row -->
 
-         <!-- /.row -->
-
-         <!-- Lantern Content -->
-         <div class="col-auto">
-            <h1 id="lanterns" class="my-4" align="center">Christmas in Heaven Lanterns</h1>
-            <div class="container">
-               <div class="row">
-                  <div class="col">
-                     <div class="card" style="width: 16rem;"">
-                        <img class="card-img-top" src="img/blackLantern1.png" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Black Lantern</h4>
-                           <p class="card-text">$45.00</p>
-                           <p class="card-text">Please attach photo in email after clicking "Order Now"</p>
-                           <br> <a href="#" data-name="Black&nbsp;Lantern" data-price="45.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+            <!-- Lantern Content -->
+            <div class="col-auto">
+               <h1 id="lanterns" class="my-4" align="center">Christmas in Heaven Lanterns</h1>
+               <div class="container">
+                  <div class="row">
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top" src="img/blackLantern1.png" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Black Lantern</h4>
+                              <p class="card-text">$45.00</p>
+                              <p class="card-text">Please attach photo in email after clicking "Order Now"</p>
+                              <br> <a href="#" data-name="Black&nbsp;Lantern" data-price="45.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top" src="img/metalLantern1.png" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Metal Lantern</h4>
+                              <p class="card-text">$45.00</p>
+                              <p class="card-text">Please attach photo in email after clicking "Order Now"</p>
+                              <br> <a href="#" data-name="Metal&nbsp;Lantern" data-price="45.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top" src="img/imageComingSoon.png" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">White Lantern</h4>
+                              <p class="card-text">$45.00</p>
+                              <p class="card-text">Please attach photo in email after clicking "Order Now"</p>
+                              <br> <a href="#" data-name="White&nbsp;Lantern" data-price="45.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top" src="img/rockingChair.jpg" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Rocking Chair Upgrade</h4>
+                              <p class="card-text">$5.00</p>
+                              <p class="card-text">Upgraded Chair will replace standard chair in Lantern</p>
+                              <br> <a href="#" data-name="Rocking&nbsp;Chair&nbsp;Upgrade" data-price="5.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
                         </div>
                      </div>
                   </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/metalLantern1.png" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Metal Lantern</h4>
-                           <p class="card-text">$45.00</p>
-                           <p class="card-text">Please attach photo in email after clicking "Order Now"</p>
-                           <br> <a href="#" data-name="Metal&nbsp;Lantern" data-price="45.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+               </div>
+            </div>
+         </div>
+         <!-- /.container -->
+      </div>
+
+      <div class="container">
+
+         <div class="row">
+
+            <div class="col-auto">
+               <h1 id="noveltyOrnaments" class="my-4" align="center">Novelty Ornaments</h1>
+               <div class="container">
+                  <div class="row">
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-ornament-Img" src="img/fthesnow.jpg" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">F**K The Snow Ornament</h4>
+                              <p class="card-text">$5.00</p>
+                              <br> <a href="#" data-name="F**k&nbsp;The&nbsp;Snow&nbsp;Ornament" data-price="5.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/imageComingSoon.png" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">White Lantern</h4>
-                           <p class="card-text">$45.00</p>
-                           <p class="card-text">Please attach photo in email after clicking "Order Now"</p>
-                           <br> <a href="#" data-name="White&nbsp;Lantern" data-price="45.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-ornament-Img" src="img/gangstawrapper.jpg" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Gangsta Wrapper Ornament</h4>
+                              <p class="card-text">$5.00</p>
+                              <br> <a href="#" data-name="Gangsta&nbsp;Wrapper&nbsp;Ornament" data-price="5.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/rockingChair.jpg" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Rocking Chair Upgrade</h4>
-                           <p class="card-text">$5.00</p>
-                           <p class="card-text">Upgraded Chair will replace standard chair in Lantern</p>
-                           <br> <a href="#" data-name="Rocking&nbsp;Chair&nbsp;Upgrade" data-price="5.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-ornament-Img" src="img/hippoforxmas.jpg" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Hippo For Christmas Ornament</h4>
+                              <p class="card-text">$5.00</p>
+                              <br> <a href="#" data-name="Hippo&nbsp;For&nbsp;Christmas&nbsp;Ornament"
+                                 data-price="5.00" class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-ornament-Img" src="img/notgoingtosuck.jpg" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Not Going To Suck Ornament</h4>
+                              <p class="card-text">$5.00</p>
+                              <br> <a href="#" data-name="Not&nbsp;Going&nbsp;To&nbsp;Suck&nbsp;Ornament"
+                                 data-price="5.00" class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-ornament-Img" src="img/ohfudge.jpg" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Oh Fudge Ornament</h4>
+                              <p class="card-text">$5.00</p>
+                              <br> <a href="#" data-name="Oh&nbsp;Fudge&nbsp;Ornament" data-price="5.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-ornament-Img" src="img/putoutforsanta.jpg" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Put Out For Santa Ornament</h4>
+                              <p class="card-text">$5.00</p>
+                              <br> <a href="#" data-name="Put&nbsp;Out&nbsp;For&nbsp;Santa&nbsp;Ornament"
+                                 data-price="5.00" class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-ornament-Img" src="img/imageComingSoon.png" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Wear Pink on Wednesday Ornament</h4>
+                              <p class="card-text">$5.00</p>
+                              <br> <a href="#" data-name="Wear&nbsp;Pink&nbsp;On&nbsp;Wednesday&nbsp;Ornament"
+                                 data-price="5.00" class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-ornament-Img" src="img/wellhung.jpg" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Well Hung Ornament</h4>
+                              <p class="card-text">$5.00</p>
+                              <br> <a href="#" data-name="Well&nbsp;Hung&nbsp;Ornament" data-price="5.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-ornament-Img" src="img/wheresmyhos.jpg" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">Where My Ho's At Ornament</h4>
+                              <p class="card-text">$5.00</p>
+                              <br> <a href="#" data-name="Where&nbsp;My&nbsp;Ho&#39;s&nbsp;At&nbsp;Ornament"
+                                 data-price="5.00" class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -166,136 +301,60 @@
             </div>
          </div>
       </div>
-      <!-- /.container -->
-   </div>
 
-   <div class="container">
+      <div class="container">
+         <div class="row">
 
-      <div class="row">
-
-         <div class="col-auto">
-            <h1 id="noveltyOrnaments" class="my-4" align="center">Novelty Ornaments</h1>
-            <div class="container">
-               <div class="row">
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/fthesnow.jpg" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">F**K The Snow Ornament</h4>
-                           <p class="card-text">$5.00</p>
-                           <br> <a href="#" data-name="F**k&nbsp;The&nbsp;Snow&nbsp;Ornament" data-price="5.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+            <div class="col-auto">
+               <h1 id="stockingHolders" class="my-4" align="center">Stocking Holders</h1>
+               <div class="container">
+                  <div class="row">
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-stocking-Img" src="img/stockingHolder1.png" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">7 Hook Stocking Holder</h4>
+                              <p class="card-text">$70.00</p>
+                              <br> <a href="#" data-name="7&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="70.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/gangstawrapper.jpg" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Gangsta Wrapper Ornament</h4>
-                           <p class="card-text">$5.00</p>
-                           <br> <a href="#" data-name="Gangsta&nbsp;Wrapper&nbsp;Ornament" data-price="5.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-stocking-Img" src="img/stockingHolder2.png" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">6 Hook Stocking Holder</h4>
+                              <p class="card-text">$65.00</p>
+                              <br> <a href="#" data-name="6&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="65.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/hippoforxmas.jpg" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Hippo For Christmas Ornament</h4>
-                           <p class="card-text">$5.00</p>
-                           <br> <a href="#" data-name="Hippo&nbsp;For&nbsp;Christmas&nbsp;Ornament"
-                              data-price="5.00" class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add
-                              to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-stocking-Img" src="img/stockingHolder1.png" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">5 Hook Stocking Holder</h4>
+                              <p class="card-text">$60.00</p>
+                              <br> <a href="#" data-name="5&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="60.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/notgoingtosuck.jpg" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Not Going To Suck Ornament</h4>
-                           <p class="card-text">$5.00</p>
-                           <br> <a href="#" data-name="Not&nbsp;Going&nbsp;To&nbsp;Suck&nbsp;Ornament"
-                              data-price="5.00" class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add
-                              to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/ohfudge.jpg" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Oh Fudge Ornament</h4>
-                           <p class="card-text">$5.00</p>
-                           <br> <a href="#" data-name="Oh&nbsp;Fudge&nbsp;Ornament" data-price="5.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/putoutforsanta.jpg" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Put Out For Santa Ornament</h4>
-                           <p class="card-text">$5.00</p>
-                           <br> <a href="#" data-name="Put&nbsp;Out&nbsp;For&nbsp;Santa&nbsp;Ornament"
-                              data-price="5.00" class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add
-                              to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/imageComingSoon.png" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Wear Pink on Wednesday Ornament</h4>
-                           <p class="card-text">$5.00</p>
-                           <br> <a href="#" data-name="Wear&nbsp;Pink&nbsp;On&nbsp;Wednesday&nbsp;Ornament"
-                              data-price="5.00" class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add
-                              to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/wellhung.jpg" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Well Hung Ornament</h4>
-                           <p class="card-text">$5.00</p>
-                           <br> <a href="#" data-name="Well&nbsp;Hung&nbsp;Ornament" data-price="5.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/wheresmyhos.jpg" alt="Card image cap"
-                           style="height: 20.5rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">Where My Ho's At Ornament</h4>
-                           <p class="card-text">$5.00</p>
-                           <br> <a href="#" data-name="Where&nbsp;My&nbsp;Ho&#39;s&nbsp;At&nbsp;Ornament"
-                              data-price="5.00" class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add
-                              to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                     <div class="col">
+                        <div class="card" style="width: 16rem;">
+                           <img class="card-img-top card-stocking-Img" src="img/stockingHolder2.png" alt="Card image cap">
+                           <div class="card-block">
+                              <h4 class="card-title">4 Hook Stocking Holder</h4>
+                              <p class="card-text">$55.00</p>
+                              <br> <a href="#" data-name="4&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="55.00"
+                                 class="add-to-cart btn btn-primary">Add to cart</a>
+                              <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -303,176 +362,117 @@
             </div>
          </div>
       </div>
-   </div>
 
-   <div class="container">
-      <div class="row">
-
-         <div class="col-auto">
-            <h1 id="stockingHolders" class="my-4" align="center">Stocking Holders</h1>
-            <div class="container">
-               <div class="row">
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">7 Hook Stocking Holder</h4>
-                           <p class="card-text">$70.00</p>
-                           <br> <a href="#" data-name="7&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="70.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">6 Hook Stocking Holder</h4>
-                           <p class="card-text">$65.00</p>
-                           <br> <a href="#" data-name="6&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="65.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/stockingHolder1.png" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">5 Hook Stocking Holder</h4>
-                           <p class="card-text">$60.00</p>
-                           <br> <a href="#" data-name="5&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="60.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="card" style="width: 16rem;">
-                        <img class="card-img-top" src="img/stockingHolder2.png" alt="Card image cap"
-                           style="height: 22rem; width: 16rem;">
-                        <div class="card-block">
-                           <h4 class="card-title">4 Hook Stocking Holder</h4>
-                           <p class="card-text">$55.00</p>
-                           <br> <a href="#" data-name="4&nbsp;Hook&nbsp;Stocking&nbsp;Holder" data-price="55.00"
-                              class="add-to-cart btn btn-primary" onClick="window.location.reload();">Add to cart</a>
-                           <!-- <button class= "btn soldOutBtn" type="button" disabled>Sold Out</button> -->
-                        </div>
-                     </div>
-                  </div>
+      <!-- Modal -->
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
                </div>
-            </div>
-         </div>
-      </div>
-   </div>
-
-   <!-- Modal -->
-   <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-         <div class="modal-content">
-            <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                  onClick="window.location.reload();">
-                  <span aria-hidden="true">&times;</span>
-               </button>
-            </div>
-            <div class="modal-body">
-               <table class="show-cart table">
-
-               </table>
-               <div>
-                  Total price: $<span class="total-cart"></span>
-               </div>
-            </div>
-            <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Continue Shopping"
-                  onClick="window.location.reload();">Continue Shopping</button>
-               <button id="orderNowButton" type="button" class="btn btn-primary" data-toggle="modal"
-                  data-target="#orderNow">Order now</button>
-            </div>
-         </div>
-      </div>
-   </div>
-
-   <div id="orderNow" class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-         <div class="modal-content">
-            <div class="modal-header">
-               <h5 align="center" class="modal-title" id="exampleModalLabel">Order Information</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-               </button>
-            </div>
-            <form class="gform" method="post" data-email="mattj5609@gmail.com"
-               action="https://script.google.com/macros/s/AKfycbzmgQ8lFLOy9EhtcBUWG2SHgFP3Xd4P2eJdC42jyt_JawRCsXXl/exec">
                <div class="modal-body">
+                  <table class="show-cart table">
+
+                  </table>
                   <div>
-                     <input type="text" id="total" name="Amount Due" class="form-control" disabled>
-                  </div>
-               </div>
-               <div class="modal-body">
-                  <div class="form-group">
-                     <input type="name" name="Name" class="form-control" id="customerName" placeholder="Name" required><br>
-                     <br> <input type="email" name="Email" class="form-control" id="emailAddress"
-                        placeholder="Email Address" required><br> <br> <input type="phone"
-                        name="Phone" class="form-control" id="phoneNumber" placeholder="Phone Number" required><br>
-                     <br> <br> <input type="street" name="Street" class="form-control" id="autocomplete"
-                        placeholder="Street" required> <input type="city" name=City class="form-control"
-                        id="inputCity" placeholder="City" required> <input type="state" name="State"
-                        class="form-control" id="inputState" placeholder="State" required> <input type="zip"
-                        name="Zip Code" class="form-control" id="inputZip" placeholder="Zip" required><br>
-                     <br>
-                  </div>
-               </div>
-               <div class="modal-body">
-                  <h5>Payment Preference:</h5>
-                  <input type="radio" id="paymentPref" name="Payment Preference" value="Venmo" checked><label
-                     for="Venmo">Venmo</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="paymentPref"
-                     name="Payment Preference" value="PayPal"><label for="PayPal">PayPal</label><br> <input
-                     type="name" name="Venmo Username" class="form-control" placeholder="Venmo Username/Phone/Email">
-                  <input type="email" name="Paypal Email" class="form-control" placeholder="Paypal Email Address"><br>
-                  <br>
-               </div>
-               <div class="modal-body">
-                  <div>
-                     <input type="text" id="itemsPretty" name="Items Purchased" id="itemsPurchased" class="form-control"
-                        disabled>
+                     Total price: $<span class="total-cart"></span>
                   </div>
                </div>
                <div class="modal-footer">
-                  <div class="form-group">
-                     <div align="center">
-                        <button type="submit" class="btn btn-secondary" value="Send">Send</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
-                     </div>
-                  </div>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Continue Shopping">Continue
+                     Shopping</button>
+                  <button id="orderNowButton" type="button" class="btn btn-primary" data-toggle="modal"
+                     data-target="#orderNow">Order now</button>
                </div>
-               <div style="display: none" class="thankyou_message">
-                  <div class="modal-body" align="center">
-                     <h2>
-                        <em>Thank You</em> for ordering!
-                     </h2>
-                     <h5>You will receive a payment request to the chosen method shortly.</h5>
-                     <p>
-                        <strong>NOTICE: </strong>An Email will be sent requesting photos for lantern purchases
-                     <p>
-                     <div align="center">
-                        <input align="center" type="button" class="clear-cart btn btn-secondary" data-dismiss="modal"
-                           value="Close" onclick="javascript:window.location.reload()">
-                     </div>
-                  </div>
-               </div>
-            </form>
-            <br>
+            </div>
          </div>
       </div>
+
+      <div id="orderNow" class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 align="center" class="modal-title" id="exampleModalLabel">Order Information</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <form class="gform" method="post" data-email="mattj5609@gmail.com"
+                  action="https://script.google.com/macros/s/AKfycbzmgQ8lFLOy9EhtcBUWG2SHgFP3Xd4P2eJdC42jyt_JawRCsXXl/exec">
+                  <div class="modal-body">
+                  <div>
+                     Amount Due: $<span class="total-cart"></span>
+                  </div>
+                  </div>
+                  <div class="modal-body">
+                     <div class="form-group">
+                        <input type="name" name="Name" class="form-control" id="customerName" placeholder="Name"
+                           required><br> <br> <input type="email" name="Email" class="form-control"
+                           id="emailAddress" placeholder="Email Address" required><br> <br> <input
+                           type="phone" name="Phone" class="form-control" id="phoneNumber" placeholder="Phone Number"
+                           required><br> <br> <br> <input type="street" name="Street"
+                           class="form-control" id="autocomplete" placeholder="Street" required> <input
+                           type="city" name=City class="form-control" id="inputCity" placeholder="City" required>
+                        <input type="state" name="State" class="form-control" id="inputState" placeholder="State"
+                           required> <input type="zip" name="Zip Code" class="form-control" id="inputZip"
+                           placeholder="Zip" required><br> <br>
+                     </div>
+                  </div>
+                  <div class="modal-body">
+                     <h5>Payment Preference:</h5>
+                     <input type="radio" id="paymentPref" name="Payment Preference" value="Venmo" checked><label
+                        for="Venmo">Venmo</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="paymentPref"
+                        name="Payment Preference" value="PayPal"><label for="PayPal">PayPal</label><br> <input
+                        type="name" name="Venmo Username" class="form-control" placeholder="Venmo Username/Phone/Email">
+                     <input type="email" name="Paypal Email" class="form-control" placeholder="Paypal Email Address"><br>
+                     <br>
+                  </div>
+                  <div class="modal-body">
+<!--                   <div>
+                  Items Purchased: <span id="itemsPretty"></span>
+                  </div> -->
+                     <div>
+                        <input type="text" id="itemsPretty" name="Items Purchased" id="itemsPurchased"
+                           class="form-control" disabled>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <div class="form-group">
+                        <div align="center">
+                           <button type="submit" class="btn btn-secondary" value="Send">Send</button>
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="display: none" class="thankyou_message">
+                     <div class="modal-body" align="center">
+                        <h2>
+                           <em>Thank You</em> for ordering!
+                        </h2>
+                        <h5>You will receive a payment request to the chosen method shortly.</h5>
+                        <p>
+                           <strong>NOTICE: </strong>An Email will be sent requesting photos for lantern purchases
+                        <p>
+                        <div align="center">
+                           <input align="center" type="button" class="clear-cart btn btn-secondary" data-dismiss="modal"
+                              value="Close" onclick="javascript:window.location.reload()">
+                        </div>
+                     </div>
+                  </div>
+               </form>
+               <br>
+            </div>
+         </div>
+      </div>
+
    </div>
+
+
 
 
    <!-- Footer -->
@@ -481,11 +481,11 @@
          <p>
             Copyright &copy; <span id="year"></span> Mandi's Craft Boutique
          </p>
-         <!-- <div class="footer-icons">
-               <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook-f"></i>
-               </a> <a href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram"></i>
-               </a>
-            </div> -->
+         <p class="powered">
+            Created By Fuzzy Productions Web Design LLC <a
+               href="mailto:mattj5609@gmail.com?subject=Website Design Inquiry"><img class="powerImage"
+               src="img/tinyTeddy.svg" alt=""></a>
+         </p>
       </div>
       <!-- /.container -->
    </footer>
@@ -504,6 +504,18 @@
          </script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
    <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script>
+            function showShop() {
+               var x = document.getElementById("welcome");
+               var y = document.getElementById('store');
+               if (x.style.display === "block") {
+                  x.style.display = "none";
+                  y.removeAttribute("hidden");
+               } else {
+                  x.style.display = "block";
+               }
+            }
+         </script>
 </body>
 
 </html>

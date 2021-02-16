@@ -1,3 +1,7 @@
+ $(function() {
+   $("#background-placeholder").load("snowflakeBackground.html");
+});
+
 // Array to store our Snowflake objects
 var snowflakes = [];
 
