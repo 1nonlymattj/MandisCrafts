@@ -1,3 +1,12 @@
+/**
+ * 
+ */
+
+
+/**
+ * 
+ */
+
 // ************************************************
 // Shopping Cart API
 // ************************************************
@@ -35,7 +44,7 @@ var shoppingCart = (function() {
 
    // Add to cart
    obj.addItemToCart = function(name, price, count) {
-      for ( var item in cart) {
+      for (var item in cart) {
          if (cart[item].name === name) {
             cart[item].count++;
             saveCart();
@@ -48,7 +57,7 @@ var shoppingCart = (function() {
    }
    // Set count from item
    obj.setCountForItem = function(name, count) {
-      for ( var i in cart) {
+      for (var i in cart) {
          if (cart[i].name === name) {
             cart[i].count = count;
             break;
@@ -57,7 +66,7 @@ var shoppingCart = (function() {
    };
    // Remove item from cart
    obj.removeItemFromCart = function(name) {
-      for ( var item in cart) {
+      for (var item in cart) {
          if (cart[item].name === name) {
             cart[item].count--;
             if (cart[item].count === 0) {
@@ -71,7 +80,7 @@ var shoppingCart = (function() {
 
    // Remove all items from cart
    obj.removeItemFromCartAll = function(name) {
-      for ( var item in cart) {
+      for (var item in cart) {
          if (cart[item].name === name) {
             cart.splice(item, 1);
             break;
@@ -89,7 +98,7 @@ var shoppingCart = (function() {
    // Count cart
    obj.totalCount = function() {
       var totalCount = 0;
-      for ( var item in cart) {
+      for (var item in cart) {
          totalCount += cart[item].count;
       }
       return totalCount;
@@ -98,7 +107,7 @@ var shoppingCart = (function() {
    // Total cart
    obj.totalCart = function() {
       var totalCart = 0;
-      for ( var item in cart) {
+      for (var item in cart) {
          totalCart += cart[item].price * cart[item].count;
       }
       return Number(totalCart.toFixed(2));
@@ -155,14 +164,15 @@ $('.clear-cart').click(function() {
 function displayCart() {
    var cartArray = shoppingCart.listCart();
    var output = "";
-   for ( var i in cartArray) {
+   for (var i in cartArray) {
       output += "<tr>" + "<td>" + cartArray[i].name + "</td>" + "<td>(" + cartArray[i].price + ")</td>"
-            + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name="
-            + cartArray[i].name + ">-</button>" + "<input type='number' class='item-count form-control' data-name='"
-            + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-            + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name
-            + ">+</button></div></td>" + "<td><button class='delete-item btn btn-danger' data-name="
-            + cartArray[i].name + ">X</button></td>" + " = " + "<td>" + cartArray[i].total + "</td>" + "</tr>";
+         + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name="
+         + cartArray[i].name + ">-</button>" + "<input type='number' class='item-count form-control' data-name='"
+         + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+         + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name
+         + ">+</button></div></td>" + "<td><button class='delete-item btn btn-danger' data-name="
+         + cartArray[i].name + ">X</button></td>" + " = " + "<td>" + cartArray[i].total + "</td>" + "</tr>";
+
    }
    $('.show-cart').html(output);
    $('.total-cart').html(shoppingCart.totalCart());
@@ -200,22 +210,71 @@ $('.show-cart').on("change", ".item-count", function(event) {
 
 displayCart();
 
-var total = shoppingCart.totalCart();
-document.getElementById("total").value = "Amount Due: $" + total;
+orderNowButton.addEventListener("click", function() {
+   createDialog();
+});
 
-var itemsString = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split('},').join('},   ');
-var itemsPretty = JSON.parse(itemsString);
-document.getElementById("itemsPretty").value = "Items Purchased: " + itemsPretty;
+function createDialog() {
+   let cashApp = '<a href="#"><img src = "img/venmo/Venmo.jpg" class="images"></img></a>';
+   var total = shoppingCart.totalCart();
+   let message = 'Scan or Click to Pay';
+   let important = '***IMPORTANT***';
+   let notice = 'You MUST click Complete Order for order to be sent AFTER you pay'
+   $('<div id = dialog align =center > ' + '<h3>' + message + '</h3>' + '<br>' + '<p class=shipping>'
+      + important + '</p>' + '<p>' + notice + '</p>' + cashApp + ' </div>').dialog({
+         title: 'Mandis Craft Boutique | Total Due: $' + total,
+         autoOpen: true,
+         modal: true,
+         width: 400,
+         resizable: false,
+         draggable: false,
+         buttons: {
+            'Ok': {
+               text: 'Complete Order',
+               'class': 'dialogButton',
+               'id': 'confim',
+               click: function() {
+                  sendMail();
+                  $(this).dialog('destroy');
+               }
+            },
+            'Cancel': {
+               text: 'Back To Cart',
+               'class': 'dialogButton',
+               'id': 'cancel',
+               click: function() {
+                  $(this).dialog('destroy');
+               }
+            }
+         }
+      });
+}
+
 
 function sendMail() {
+   var total = shoppingCart.totalCart();
+   var itemsString = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split('},').join('},   ');
+   var itemsPretty = JSON.parse(itemsString);
    var itemsString = JSON.stringify(sessionStorage.getItem('shoppingCart'), null, '&nbsp').split(',').join('%0D%0A');
    var itemsPretty = JSON.parse(itemsString);
-   var notice = "Please Attach Photos If Ordering Lanterns";
    var items = "Items Purchased: ";
-   var totalDue = "Total Amount Due When Item(s) Are Complete: "
+   var totalDue = "Total Amount Due: "
    var total = shoppingCart.totalCart();
-   var bodyString = 'Please Fill Out Information Below: %0D%0A Name: %0D%0A Phone: %0D%0A Address: %0D%0A %0D%0A'
-   window.open('mailto:mattj5609@gmail.com?cc=mandimay5609@gmail.com&subject=Mandis Craft Boutique Order Form&body='
-         + notice + '%0D%0A %0D%0A' + bodyString + items + '%0D%0A' + itemsPretty + '%0D%0A %0D%0A' + totalDue + total);
-   document.getElementById("total").value = total;
+   var customerInfo = 'Customer Information: ';
+   var customerName = document.getElementById("customerName").value;
+   var emailAddress = document.getElementById("emailAddress").value;
+   var phoneNumber = document.getElementById("phoneNumber").value;
+
+   /**    var address = document.getElementById("inputAddress").value + ' ' + document.getElementById("inputCity").value
+         + ' ' + document.getElementById("inputState").value + ' ' + document.getElementById("inputZip").value;
+   
+      window.open('mailto:mattj5609@gmail.com?cc=&subject=402 Bulldogs Order Form&body='
+         + '%0D%0A %0D%0A' + customerInfo + '%0D%0A' + customerName + '%0D%0A' + emailAddress
+         + '%0D%0A' + phoneNumber + '%0D%0A' + address + '%0D%0A %0D%0A' + items + '%0D%0A'
+         + itemsPretty + '%0D%0A %0D%0A' + totalDue + total);
+   */
+   window.open('mailto:mattj5609@gmail.com?cc=&subject=402 Bulldogs Order Form&body='
+      + '%0D%0A %0D%0A' + customerInfo + '%0D%0A' + customerName + '%0D%0A' + emailAddress
+      + '%0D%0A' + phoneNumber + '%0D%0A %0D%0A' + items + '%0D%0A'
+      + itemsPretty + '%0D%0A %0D%0A' + totalDue + total);
 }
