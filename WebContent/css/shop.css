@@ -17,6 +17,14 @@ body {
    text-decoration: underline;
 }
 
+.shopItem {
+   text-align: center !important;
+   margin-bottom: 0.5rem !important;
+   font-size: 18px;
+   color: #e7b6ff;
+   text-decoration: underline;
+}
+
 .toTop {
    font-size: 20px !important;
    color: #e5a2ff!important;
