@@ -268,12 +268,12 @@ function sendMail() {
    /**    var address = document.getElementById("inputAddress").value + ' ' + document.getElementById("inputCity").value
          + ' ' + document.getElementById("inputState").value + ' ' + document.getElementById("inputZip").value;
    
-      window.open('mailto:mattj5609@gmail.com?cc=&subject=402 Bulldogs Order Form&body='
+      window.open('mailto:mattj5609@gmail.com?cc=&subject=Mandis Boutique Order Form&body='
          + '%0D%0A %0D%0A' + customerInfo + '%0D%0A' + customerName + '%0D%0A' + emailAddress
          + '%0D%0A' + phoneNumber + '%0D%0A' + address + '%0D%0A %0D%0A' + items + '%0D%0A'
          + itemsPretty + '%0D%0A %0D%0A' + totalDue + total);
    */
-   window.open('mailto:mattj5609@gmail.com?cc=&subject=402 Bulldogs Order Form&body='
+   window.open('mailto:mattj5609@gmail.com?cc=&subject=Mandis Boutique Order Form&body='
       + '%0D%0A %0D%0A' + customerInfo + '%0D%0A' + customerName + '%0D%0A' + emailAddress
       + '%0D%0A' + phoneNumber + '%0D%0A %0D%0A' + items + '%0D%0A'
       + itemsPretty + '%0D%0A %0D%0A' + totalDue + total);
