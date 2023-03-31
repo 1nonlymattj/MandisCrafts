@@ -11,7 +11,7 @@
 // Shopping Cart API
 // ************************************************
 
-var shoppingCart = (function() {
+var shoppingCart = (function () {
    // =============================
    // Private methods and propeties
    // =============================
@@ -43,7 +43,7 @@ var shoppingCart = (function() {
    var obj = {};
 
    // Add to cart
-   obj.addItemToCart = function(name, price, count) {
+   obj.addItemToCart = function (name, price, count) {
       for (var item in cart) {
          if (cart[item].name === name) {
             cart[item].count++;
@@ -56,7 +56,7 @@ var shoppingCart = (function() {
       saveCart();
    }
    // Set count from item
-   obj.setCountForItem = function(name, count) {
+   obj.setCountForItem = function (name, count) {
       for (var i in cart) {
          if (cart[i].name === name) {
             cart[i].count = count;
@@ -65,7 +65,7 @@ var shoppingCart = (function() {
       }
    };
    // Remove item from cart
-   obj.removeItemFromCart = function(name) {
+   obj.removeItemFromCart = function (name) {
       for (var item in cart) {
          if (cart[item].name === name) {
             cart[item].count--;
@@ -79,7 +79,7 @@ var shoppingCart = (function() {
    }
 
    // Remove all items from cart
-   obj.removeItemFromCartAll = function(name) {
+   obj.removeItemFromCartAll = function (name) {
       for (var item in cart) {
          if (cart[item].name === name) {
             cart.splice(item, 1);
@@ -90,13 +90,13 @@ var shoppingCart = (function() {
    }
 
    // Clear cart
-   obj.clearCart = function() {
+   obj.clearCart = function () {
       cart = [];
       saveCart();
    }
 
    // Count cart
-   obj.totalCount = function() {
+   obj.totalCount = function () {
       var totalCount = 0;
       for (var item in cart) {
          totalCount += cart[item].count;
@@ -105,7 +105,7 @@ var shoppingCart = (function() {
    }
 
    // Total cart
-   obj.totalCart = function() {
+   obj.totalCart = function () {
       var totalCart = 0;
       for (var item in cart) {
          totalCart += cart[item].price * cart[item].count;
@@ -114,7 +114,7 @@ var shoppingCart = (function() {
    }
 
    // List cart
-   obj.listCart = function() {
+   obj.listCart = function () {
       var cartCopy = [];
       for (i in cart) {
          item = cart[i];
@@ -147,7 +147,7 @@ var shoppingCart = (function() {
 // Triggers / Events
 // *****************************************
 // Add item
-$('.add-to-cart').click(function(event) {
+$('.add-to-cart').click(function (event) {
    event.preventDefault();
    var name = $(this).data('name');
    var price = Number($(this).data('price'));
@@ -156,7 +156,7 @@ $('.add-to-cart').click(function(event) {
 });
 
 // Clear items
-$('.clear-cart').click(function() {
+$('.clear-cart').click(function () {
    shoppingCart.clearCart();
    displayCart();
 });
@@ -181,27 +181,27 @@ function displayCart() {
 
 // Delete item button
 
-$('.show-cart').on("click", ".delete-item", function(event) {
+$('.show-cart').on("click", ".delete-item", function (event) {
    var name = $(this).data('name')
    shoppingCart.removeItemFromCartAll(name);
    displayCart();
 })
 
 // -1
-$('.show-cart').on("click", ".minus-item", function(event) {
+$('.show-cart').on("click", ".minus-item", function (event) {
    var name = $(this).data('name')
    shoppingCart.removeItemFromCart(name);
    displayCart();
 })
 // +1
-$('.show-cart').on("click", ".plus-item", function(event) {
+$('.show-cart').on("click", ".plus-item", function (event) {
    var name = $(this).data('name')
    shoppingCart.addItemToCart(name);
    displayCart();
 })
 
 // Item count input
-$('.show-cart').on("change", ".item-count", function(event) {
+$('.show-cart').on("change", ".item-count", function (event) {
    var name = $(this).data('name');
    var count = Number($(this).val());
    shoppingCart.setCountForItem(name, count);
@@ -210,7 +210,7 @@ $('.show-cart').on("change", ".item-count", function(event) {
 
 displayCart();
 
-orderNowButton.addEventListener("click", function() {
+orderNowButton.addEventListener("click", function () {
    createDialog();
 });
 
@@ -233,7 +233,7 @@ function createDialog() {
                text: 'Complete Order',
                'class': 'dialogButton',
                'id': 'confim',
-               click: function() {
+               click: function () {
                   sendMail();
                   $(this).dialog('destroy');
                }
@@ -242,7 +242,7 @@ function createDialog() {
                text: 'Back To Cart',
                'class': 'dialogButton',
                'id': 'cancel',
-               click: function() {
+               click: function () {
                   $(this).dialog('destroy');
                }
             }
