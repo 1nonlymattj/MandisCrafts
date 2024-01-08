@@ -215,7 +215,7 @@ orderNowButton.addEventListener("click", function () {
 });
 
 function createDialog() {
-   let cashApp = '<a href="#"><img src = "img/venmo/Venmo.jpg" class="images"></img></a>';
+   let cashApp = '<a href="#"><img src = "resources/img/venmo/Venmo.jpg" class="images"></img></a>';
    var total = shoppingCart.totalCart();
    let message = 'Scan or Click to Pay';
    let important = '***IMPORTANT***';
